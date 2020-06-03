@@ -1,0 +1,36 @@
+﻿body {
+    width:1200px;
+    margin:auto;
+}
+#outer{
+    height:100%;
+    width:1200px;
+}
+#banner{
+    height:50px;
+    width:100%;
+    background-color:red;
+}
+
+#main{
+    height:100%;
+    width:1200px;
+}
+#left{
+    height:100%;
+    width:20%;
+    float:left;
+    background-color:yellow;
+}
+#right{
+    height:100%;
+    float:right;
+    width:25%;
+    background-color:aqua;
+}
+#mid{
+    height:100%;
+    width:auto;
+    
+}
+

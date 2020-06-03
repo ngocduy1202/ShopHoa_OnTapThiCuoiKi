@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="ShopHoa_OnTapThiCuoiKi.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="master.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="outer">
+            <div id="banner"></div>
+           
+            <div id="main">
+                <div id="left">
+                    <asp:DataList ID="DataList1" runat="server">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" Text='<%#Eval("TenDM") %>' OnClick="LinkButton1_Click" CommandArgument='<%# Eval("MaDM") %>' runat="server">LinkButton</asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </div>
+                <div id="right">
+                    <asp:Login ID="Login1" OnAuthenticate="Login1_Authenticate" runat="server" LoginButtonText="Đăng Nhập" PasswordLabelText="Mật Khẩu" RememberMeText="user: a1 || pass:1" UserNameLabelText="Tên ĐN"></asp:Login>
+                </div>
+                <div id="mid">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div id="footer"></div>
+        </div>
+    </form>
+</body>
+</html>
